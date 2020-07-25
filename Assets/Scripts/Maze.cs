@@ -52,8 +52,9 @@ public class Maze : MonoBehaviour
 
     IEnumerator waiter()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(6f);
         removeMiddle();
+        makeEntrances();
     }
 
     public void spawnLeftRightBoundaries()
@@ -206,6 +207,25 @@ public class Maze : MonoBehaviour
             i++;
         }
         Instantiate(Cake, mid, Quaternion.identity);
+    }
+
+    public void makeEntrances()
+    {
+        Vector3 mid = new Vector3((float)(5 * width) / 2, 0.0f, 0.0f );
+        Vector3 right = new Vector3(0.0f, 0.0f, (float)(5 * height) / 2);
+        Vector3 left = new Vector3((float)(5*width), 0.0f, (float)(5 * height) / 2);
+        Collider[] hitColliders = Physics.OverlapSphere(mid, 2);
+        Collider[] hitColliders2 = Physics.OverlapSphere(right, 2);
+        Collider[] hitColliders3 = Physics.OverlapSphere(left, 2);
+        int i = 0;
+        while (i < hitColliders.Length && i< hitColliders2.Length && i < hitColliders3.Length)
+        {
+            Destroy(hitColliders[i].gameObject);
+            Destroy(hitColliders2[i].gameObject);
+            Destroy(hitColliders3[i].gameObject);
+            i++;
+        }
+
     }
 
 }

@@ -502,8 +502,8 @@ MonoBehaviour:
   Fruit3: {fileID: 0}
   Fruit4: {fileID: 0}
   Cake: {fileID: 1014346930}
-  width: 10
-  height: 10
+  width: 25
+  height: 25
   tiles: []
   edges: []
   EdgeIndex: 0
