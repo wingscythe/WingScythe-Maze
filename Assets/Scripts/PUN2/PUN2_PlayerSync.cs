@@ -13,7 +13,7 @@ public class PUN2_PlayerSync : MonoBehaviourPun, IPunObservable {
     Vector3 velocity;
     Vector3 angularVelocity;
 
-    public Rigidbody rb;
+    Rigidbody rb;
 
     // Use this for initialization
     void Start () {
@@ -44,7 +44,7 @@ public class PUN2_PlayerSync : MonoBehaviourPun, IPunObservable {
             latestRot = (Quaternion)stream.ReceiveNext();
             velocity = (Vector3)stream.ReceiveNext();
             angularVelocity = (Vector3)stream.ReceiveNext();
-        }
+        }       
     }
 
     // Update is called once per frame
