@@ -5,6 +5,7 @@ using Photon.Realtime;
 
 public class PUN2_GameLobby : MonoBehaviourPunCallbacks {
     public string levelName = "Maze";
+    public int maxPlayers = 4;
 
     //Our player name
     string playerName = "Player 1";
@@ -72,7 +73,7 @@ public class PUN2_GameLobby : MonoBehaviourPunCallbacks {
                 RoomOptions roomOptions = new RoomOptions();
                 roomOptions.IsOpen = true;
                 roomOptions.IsVisible = true;
-                roomOptions.MaxPlayers = (byte)10; //Set any number
+                roomOptions.MaxPlayers = (byte)maxPlayers; //Set any number
 
                 PhotonNetwork.JoinOrCreateRoom(roomName, roomOptions, TypedLobby.Default);
             }
