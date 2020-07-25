@@ -190,7 +190,7 @@ public class Maze : MonoBehaviour
         for (int i = 0; i < loopNum; i++)
         {
             removeEdges();
-            yield return new WaitForSeconds(0.001f);
+            yield return new WaitForSeconds(0f);
         }
     }
 
@@ -198,7 +198,7 @@ public class Maze : MonoBehaviour
     {
         
         Vector3 mid = new Vector3((float) (5*width) / 2, 0.0f,(float) (5*height) / 2);
-        Collider[] hitColliders = Physics.OverlapSphere(mid, 5);
+        Collider[] hitColliders = Physics.OverlapSphere(mid, 6);
         int i = 0;
         while (i < hitColliders.Length)
         {
