@@ -385,7 +385,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1962998217}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.07007265, y: -1.1400428, z: 0.2976619}
+  m_LocalPosition: {x: -0.07007265, y: -15.1, z: 0.2976619}
   m_LocalScale: {x: 20, y: 1, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
@@ -404,8 +404,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 2821982233091559058, guid: f59865d4fd90c774eb4e3748a1719ef6, type: 3}
-  width: 20
-  height: 20
+  width: 30
+  height: 30
   tiles: []
   edges:
   - {fileID: 0}

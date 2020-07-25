@@ -1,5 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Diagnostics;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class Maze : MonoBehaviour
@@ -28,15 +32,22 @@ public class Maze : MonoBehaviour
 
         edges = new List<Edge>();
 
-
-
         spawnLeftRightBoundaries();
         spawnUpDownBoundaries();
         spawnInnerEdgesLeftRight();
         spawnInnerEdgesUpDown();
 
-
+       
         StartCoroutine(removeEdgeCoroutine());
+        StartCoroutine(waiter());
+        
+
+    }
+
+    IEnumerator waiter()
+    {
+        yield return new WaitForSeconds(5f);
+        removeMiddle();
     }
 
     public void spawnLeftRightBoundaries()
@@ -127,8 +138,7 @@ public class Maze : MonoBehaviour
 
     public void removeEdges()
     { 
-
-        int randInt = Random.Range(0, edges.Count);
+        int randInt = UnityEngine.Random.Range(0, edges.Count);
 
         Edge randomEdge = edges[randInt];
 
@@ -174,7 +184,19 @@ public class Maze : MonoBehaviour
         for (int i = 0; i < loopNum; i++)
         {
             removeEdges();
-            yield return new WaitForSeconds(.001f);
+            yield return new WaitForSeconds(0.001f);
+        }
+    }
+
+    public void removeMiddle()
+    {
+        Vector3 mid = new Vector3((float) (5*width) / 2, 0.0f,(float) (5*height) / 2);
+        Collider[] hitColliders = Physics.OverlapSphere(mid, 4);
+        int i = 0;
+        while (i < hitColliders.Length)
+        {
+            Destroy(hitColliders[i].gameObject);
+            i++;
         }
     }
 
@@ -205,3 +227,5 @@ public class Tile
     }
 
 }
+
+
