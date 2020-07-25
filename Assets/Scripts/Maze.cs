@@ -52,7 +52,7 @@ public class Maze : MonoBehaviour
 
     IEnumerator waiter()
     {
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(10f);
         removeMiddle();
         makeEntrances();
     }
@@ -199,7 +199,7 @@ public class Maze : MonoBehaviour
     {
         
         Vector3 mid = new Vector3((float) (5*width) / 2, 0.0f,(float) (5*height) / 2);
-        Collider[] hitColliders = Physics.OverlapSphere(mid, 6);
+        Collider[] hitColliders = Physics.OverlapBox(mid, transform.localScale / 4);
         int i = 0;
         while (i < hitColliders.Length)
         {
@@ -211,18 +211,21 @@ public class Maze : MonoBehaviour
 
     public void makeEntrances()
     {
-        Vector3 mid = new Vector3((float)(5 * width) / 2, 0.0f, 0.0f );
-        Vector3 right = new Vector3(0.0f, 0.0f, (float)(5 * height) / 2);
-        Vector3 left = new Vector3((float)(5*width), 0.0f, (float)(5 * height) / 2);
-        Collider[] hitColliders = Physics.OverlapSphere(mid, 2);
-        Collider[] hitColliders2 = Physics.OverlapSphere(right, 2);
-        Collider[] hitColliders3 = Physics.OverlapSphere(left, 2);
+        Vector3 top = new Vector3((5.0f * width) / 2.0f, 0.0f, (5.0f* height));
+        Vector3 mid = new Vector3((5.0f * width) / 2.0f, 0.0f, 0.0f );
+        Vector3 left = new Vector3(0.0f, 0.0f, (5.0f * height) / 2.0f);
+        Vector3 right = new Vector3((5.0f*width), 0.0f, (5.0f * height) / 2.0f);
+        Collider[] hitColliders = Physics.OverlapBox(mid, transform.localScale / 8);
+        Collider[] hitColliders2 = Physics.OverlapBox(right, transform.localScale / 8);
+        Collider[] hitColliders3 = Physics.OverlapBox(left, transform.localScale / 8);
+        Collider[] hitColliders4 = Physics.OverlapBox(top, transform.localScale / 8);
         int i = 0;
-        while (i < hitColliders.Length && i< hitColliders2.Length && i < hitColliders3.Length)
+        while (i < hitColliders.Length && i< hitColliders2.Length && i < hitColliders3.Length && i < hitColliders4.Length)
         {
             Destroy(hitColliders[i].gameObject);
             Destroy(hitColliders2[i].gameObject);
             Destroy(hitColliders3[i].gameObject);
+            Destroy(hitColliders4[i].gameObject);
             i++;
         }
 
