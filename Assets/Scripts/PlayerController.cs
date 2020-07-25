@@ -54,19 +54,19 @@ public class PlayerController : MonoBehaviour
     }
     void PlayerRotation() {
         // H: 0 V: 1 --> forward
-        if (horizontalInput == 0 && verticalInput >= 0 ) {
+        if (horizontalInput == 0 && verticalInput > 0 ) {
             transform.rotation = Quaternion.Euler(0, 0, 0);
         } 
         // H: 0 V: -1 --> backwards
-        if (horizontalInput == 0 && verticalInput <= 0 ) {
+        if (horizontalInput == 0 && verticalInput < 0 ) {
             transform.rotation = Quaternion.Euler(0, 180, 0);
         }
         // H: -1 V: 0 --> left
-        if (horizontalInput >= 0 && verticalInput == 0 ) {
+        if (horizontalInput > 0 && verticalInput == 0 ) {
             transform.rotation = Quaternion.Euler(0, 90, 0);
         } 
         // H: 1 V: 0 --> right
-        if (horizontalInput <= 0 && verticalInput == 0 ) {
+        if (horizontalInput < 0 && verticalInput == 0 ) {
             transform.rotation = Quaternion.Euler(0, 270, 0);
         }
     }
