@@ -213,7 +213,7 @@ public class Maze : MonoBehaviour
     {
         Vector3 top = new Vector3((5.0f * width) / 2.0f, 0.0f, (5.0f* height));
         Vector3 mid = new Vector3((5.0f * width) / 2.0f, 0.0f, 0.0f );
-        Vector3 left = new Vector3(0.0f, 0.0f, (5.0f * height) / 2.0f);
+        Vector3 left = new Vector3(0.0f, 0.0f, (5.0f * height) / 2.5f);
         Vector3 right = new Vector3((5.0f*width), 0.0f, (5.0f * height) / 2.0f);
         Collider[] hitColliders = Physics.OverlapBox(mid, transform.localScale / 8);
         Collider[] hitColliders2 = Physics.OverlapBox(right, transform.localScale / 8);
