@@ -174,7 +174,7 @@ public class Maze : MonoBehaviour
         for (int i = 0; i < loopNum; i++)
         {
             removeEdges();
-            yield return new WaitForSeconds(.2f);
+            yield return new WaitForSeconds(.001f);
         }
     }
 
