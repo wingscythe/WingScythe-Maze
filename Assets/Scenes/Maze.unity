@@ -226,6 +226,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 2757614949434237555, guid: 46ce934711d9cea49856246b75d86f53,
     type: 3}
+  mazePrefab: {fileID: 7369932334031643225, guid: 548eca95efeacd44fb486b39a4f04f02,
+    type: 3}
   _spawnPoint:
   - {fileID: 234959534}
   - {fileID: 462809372}
