@@ -13,7 +13,7 @@ public class PUN2_PlayerSync : MonoBehaviourPun, IPunObservable {
     Vector3 velocity;
     Vector3 angularVelocity;
 
-    Rigidbody rb;
+    public Rigidbody rb;
 
     // Use this for initialization
     void Start () {

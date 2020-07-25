@@ -650,6 +650,7 @@ MonoBehaviour:
   - {fileID: 2757614949434237837}
   localObjects:
   - {fileID: 7908648977563413423}
+  rb: {fileID: 2757614949434237838}
 --- !u!1 &2930962243091842951
 GameObject:
   m_ObjectHideFlags: 0
