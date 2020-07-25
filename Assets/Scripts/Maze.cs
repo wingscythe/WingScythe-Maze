@@ -17,8 +17,6 @@ public class Maze : MonoBehaviour
 
     public int EdgeIndex = 0;
 
-
-
     public void Start()
     {
         tiles = new Tile[width * height];
@@ -85,8 +83,6 @@ public class Maze : MonoBehaviour
                 GameObject go = (GameObject)Instantiate(prefab, new Vector3((x * 5), 0, (z * 5)), Quaternion.Euler(0, 90, 0));
 
                 Edge edge = go.AddComponent<Edge>() as Edge;
-
-
 
                 go.GetComponent<Edge>().tiles = new Tile[2];
                 go.GetComponent<Edge>().tiles[0] = tiles[EdgeIndex];
@@ -183,9 +179,6 @@ public class Maze : MonoBehaviour
     }
 
 }
-
-
-
 
 [System.Serializable]
 public class Tile
