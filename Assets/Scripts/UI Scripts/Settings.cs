@@ -6,9 +6,7 @@ using UnityEngine.Events;
 
 public class Settings : MonoBehaviour
 {
-    [Header("Settings")]
-    public string keyCode;
-
+    public KeyCode key;
     public Canvas canvas;
     public GameObject GUI;
     bool onDisplay = false;
@@ -27,15 +25,16 @@ public class Settings : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(keyCode)) {
+        // Debug.Log(Input.GetAxisRaw("Settings"));
+        if (Input.GetKeyDown(key)) {
             OnClick();
+            
         }
         
     }
 
     void OnClick()
     {
-        Debug.Log("test");
         if (!onDisplay)
         {
             openGUI();
