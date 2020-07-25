@@ -17,8 +17,6 @@ public class PUN2_PlayerSync : MonoBehaviourPun, IPunObservable {
 
     // Use this for initialization
     void Start () {
-        rb = GetComponent<Rigidbody>();
-
         if (photonView.IsMine) {
         } else {
             //Player is Remote, deactivate the scripts and object that should only be enabled for the local player
