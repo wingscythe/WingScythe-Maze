@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     [Header("Dependencies")]
     public Rigidbody rb;
     //public Animator anims;
-    public Transform camera;
+    public Transform mcamera;
 
     [Header("Movement")]
     public float moveSpeed = 5f;
@@ -57,22 +57,22 @@ public class PlayerController : MonoBehaviour
         // H: 0 V: 1 --> forward
         if (horizontalInput == 0 && verticalInput > 0 ) {
             transform.rotation = Quaternion.Euler(0, 0, 0);
-            camera.rotation = Quaternion.Euler(90, 0, 0);
+            mcamera.rotation = Quaternion.Euler(90, 0, 0);
         } 
         // H: 0 V: -1 --> backwards
         if (horizontalInput == 0 && verticalInput < 0 ) {
             transform.rotation = Quaternion.Euler(0, 180, 0);
-            camera.rotation = Quaternion.Euler(90, -180, 180);
+            mcamera.rotation = Quaternion.Euler(90, -180, 180);
         }
         // H: -1 V: 0 --> left
         if (horizontalInput > 0 && verticalInput == 0 ) {
             transform.rotation = Quaternion.Euler(0, 90, 0);
-            camera.rotation = Quaternion.Euler(90, -90, 270);
+            mcamera.rotation = Quaternion.Euler(90, -90, 270);
         } 
         // H: 1 V: 0 --> right
         if (horizontalInput < 0 && verticalInput == 0 ) {
             transform.rotation = Quaternion.Euler(0, 270, 0);
-            camera.rotation = Quaternion.Euler(90, -270, 90);
+            mcamera.rotation = Quaternion.Euler(90, -270, 90);
         }
     }
     void MovementAnimation() {
