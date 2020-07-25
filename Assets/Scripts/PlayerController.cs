@@ -16,10 +16,14 @@ public class PlayerController : MonoBehaviour
     [Header("State")]
     public float speed = 0;
 
+    [Header("Animator")]
+    private Animator anims;
+
     // Start is called before the first frame update
     void Start()
     {
         speed = moveSpeed;
+        anims = gameObject.GetComponentInChildren<Animator>();
     }
 
     // Update is called once per frame
@@ -27,10 +31,15 @@ public class PlayerController : MonoBehaviour
     {
         InputUpdate();
         Movement();
+        MovementAnimation();
+        if(Input.GetKey(KeyCode.Q)) {
+            HoldingObject();
+        }
+        PlayerRotation();
     }
 
     void Movement() {
-        Vector3 velocity = new Vector3(horizontalInput, 0, verticalInput) * speed;;
+        Vector3 velocity = new Vector3(horizontalInput, 0, verticalInput) * speed;
         rb.velocity = velocity;
     }
 
@@ -39,5 +48,30 @@ public class PlayerController : MonoBehaviour
         verticalInput = Input.GetAxisRaw("Vertical");
         // anims.SetFloat("horizontal_float", horizontalInput);
         // anims.SetFloat("vertical_float", verticalInput);
+    }
+    void HoldingObject() {
+        anims.SetBool("HasObject",true);
+    }
+    void PlayerRotation() {
+        // H: 0 V: 1 --> forward
+        if (horizontalInput == 0 && verticalInput >= 0 ) {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        } 
+        // H: 0 V: -1 --> backwards
+        if (horizontalInput == 0 && verticalInput <= 0 ) {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        // H: -1 V: 0 --> left
+        if (horizontalInput >= 0 && verticalInput == 0 ) {
+            transform.rotation = Quaternion.Euler(0, 90, 0);
+        } 
+        // H: 1 V: 0 --> right
+        if (horizontalInput <= 0 && verticalInput == 0 ) {
+            transform.rotation = Quaternion.Euler(0, 270, 0);
+        }
+    }
+    void MovementAnimation() {
+        float FloatSpeed = Mathf.Abs((horizontalInput+verticalInput)*speed);
+        anims.SetFloat("speed", FloatSpeed);
     }
 }
