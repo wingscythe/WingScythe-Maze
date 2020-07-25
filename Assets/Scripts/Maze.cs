@@ -10,6 +10,12 @@ public class Maze : MonoBehaviour
 {
 
     public GameObject prefab;
+    public GameObject Fruit1;
+    public GameObject Fruit2;
+    public GameObject Fruit3;
+    public GameObject Fruit4;
+    public GameObject Cake;
+
 
     public int width;
 
@@ -190,14 +196,16 @@ public class Maze : MonoBehaviour
 
     public void removeMiddle()
     {
+        
         Vector3 mid = new Vector3((float) (5*width) / 2, 0.0f,(float) (5*height) / 2);
-        Collider[] hitColliders = Physics.OverlapSphere(mid, 4);
+        Collider[] hitColliders = Physics.OverlapSphere(mid, 5);
         int i = 0;
         while (i < hitColliders.Length)
         {
             Destroy(hitColliders[i].gameObject);
             i++;
         }
+        Instantiate(Cake, mid, Quaternion.identity);
     }
 
 }
