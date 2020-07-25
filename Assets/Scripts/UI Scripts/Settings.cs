@@ -35,6 +35,7 @@ public class Settings : MonoBehaviour
 
     void OnClick()
     {
+        Debug.Log("test");
         if (!onDisplay)
         {
             openGUI();
