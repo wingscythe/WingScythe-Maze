@@ -5,6 +5,8 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
 
     //Player instance prefab, must be located in the Resources folder
     public GameObject playerPrefab;
+
+    public GameObject mazePrefab;
     //Player spawn point
     public Transform[] _spawnPoint;
 
@@ -18,6 +20,13 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
         }
 
         PhotonNetwork.Instantiate(playerPrefab.name, _spawnPoint[PhotonNetwork.LocalPlayer.ActorNumber - 1].transform.position, _spawnPoint[PhotonNetwork.LocalPlayer.ActorNumber - 1].transform.rotation);
+    
+        bool isMasterClient = PhotonNetwork.IsMasterClient;
+        
+        if(isMasterClient){
+            //Control and sync maze spawn
+            PhotonNetwork.Instantiate(mazePrefab.name, Vector3.zero , Quaternion.identity);
+        }
     }
 
     void OnGUI () {
