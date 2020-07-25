@@ -50,7 +50,7 @@ MonoBehaviour:
   Fruit2: {fileID: 0}
   Fruit3: {fileID: 0}
   Fruit4: {fileID: 0}
-  Cake: {fileID: 931021868003047243, guid: d53317be757e1e5429ea2fe649ee7bf9, type: 3}
+  Cake: {fileID: 6579421801118489178, guid: 6823a38448fe9ac42a5136c36713c94b, type: 3}
   width: 20
   height: 20
   tiles: []
