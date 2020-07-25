@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 7369932334031643229}
   - component: {fileID: 7369932334031643230}
   - component: {fileID: -3886319158686595958}
-  - component: {fileID: -2707523477318916369}
-  - component: {fileID: -3426664355307981613}
+  - component: {fileID: -7160001155789694775}
   m_Layer: 0
   m_Name: Maze
   m_TagString: Untagged
@@ -75,11 +74,11 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   ObservedComponents:
-  - {fileID: -2707523477318916369}
+  - {fileID: -7160001155789694775}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &-2707523477318916369
+--- !u!114 &-7160001155789694775
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,26 +87,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 7369932334031643225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6a82fcd19536414697ed7fc08c4bd39, type: 3}
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  localScripts:
-  - {fileID: 7369932334031643230}
-  localObjects: []
-  rb: {fileID: -3426664355307981613}
---- !u!54 &-3426664355307981613
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7369932334031643225}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 1
