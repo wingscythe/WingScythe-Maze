@@ -5,22 +5,21 @@ using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
-    [Header(Settings)]
-    public Keycode key;
+    [Header("Settings")]
+    public string keyCode;
 
     public Canvas canvas;
-    object hud;
+    GameObject hud;
     // Start is called before the first frame update
     void Start()
     {
-        hud = canvas.GetComponent(SettingsUI);
         hud.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.getKeyCode(key)) {
+        if (Input.GetKeyDown(keyCode)) {
             onClick();
         }
     }
