@@ -58,7 +58,7 @@ public class Maze : MonoBehaviour
 
     IEnumerator waiter()
     {
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(10f);
         removeMiddle();
         makeEntrances();
     }
