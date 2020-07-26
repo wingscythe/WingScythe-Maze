@@ -7,6 +7,7 @@ public class CounterText : MonoBehaviour
 {
     public GameObject player;
     public Text pointCounter;
+    public GameObject winnerText;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,12 @@ public class CounterText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pointCounter.text = player.GetComponent<PlayerController>().points.ToString();
+        int points = player.GetComponent<PlayerController>().points;
+        pointCounter.text = points.ToString();
+        if (points >= 3)
+        {
+            winnerText.SetActive(true);
+            winnerText.GetComponent<Text>().text = "Congratulations! You got the most toppings!\nWinner";
+        }
     }
 }

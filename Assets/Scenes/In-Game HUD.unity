@@ -1823,6 +1823,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  pointCounter: {fileID: 1487408255}
+  winnerText: {fileID: 0}
 --- !u!1 &1500890662
 GameObject:
   m_ObjectHideFlags: 0
