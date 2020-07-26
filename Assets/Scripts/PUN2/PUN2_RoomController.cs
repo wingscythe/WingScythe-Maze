@@ -10,6 +10,8 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
     //Player spawn point
     public Transform[] _spawnPoint;
 
+    public int seed;
+
     // Use this for initialization
     void Start () {
         //In case we started this demo with the wrong scene being active, simply load the menu scene
@@ -26,7 +28,19 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
         if(isMasterClient){
             //Control and sync maze spawn
             PhotonNetwork.Instantiate(mazePrefab.name, Vector3.zero , Quaternion.identity);
+
+            seed = Random.Range(int.MinValue, int.MaxValue);
+	        photonView.RPC("SetAll", PhotonTargets.All, Random.Range(int.MinValue, int.MaxValue));
         }
+    }
+
+    void setSeed(int sentSeed){
+        seed = sentSeed;
+        Debug.Log("RECIEVED SEED: " + seed);
+    }
+
+    void getSeed(){
+        return seed;
     }
 
     void OnGUI () {
