@@ -25,9 +25,9 @@ public class Maze : MonoBehaviour
 
     public int height;
 
-    public Tile[] tiles;
+    public static Tile[] tiles;
 
-    public List<Edge> edges;
+    public static List<Edge> edges;
 
     public int EdgeIndex = 0;
 
@@ -214,6 +214,8 @@ public class Maze : MonoBehaviour
             yield return new WaitForSeconds(0.01f);
         }
     }
+
+    
 
     public void removeMiddle()
     {
