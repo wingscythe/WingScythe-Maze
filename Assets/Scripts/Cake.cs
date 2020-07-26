@@ -21,6 +21,10 @@ public class Cake : MonoBehaviour
             Destroy(col.gameObject);
             Debug.Log("touched cake");
         }
+        if(col.gameObject.tag == "Player")
+        {
+            col.GetComponent<PlayerController>().isHolding = false; 
+        }
     }
 
 }
