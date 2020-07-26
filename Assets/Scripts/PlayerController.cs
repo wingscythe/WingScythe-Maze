@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5f;
     private float horizontalInput = 0f;
     private float verticalInput = 0f;
+    public int fruit;
 
     [Header("State")]
     public float speed = 0;
