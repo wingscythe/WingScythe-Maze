@@ -44,6 +44,10 @@ public class PlayerController : MonoBehaviour
         if(isHolding) {
             HoldingObject();
         }
+        else if(isHolding == false)
+        {
+            anims.SetBool("HasObject", false);
+        }
         PlayerRotation();
     }
 
@@ -101,6 +105,7 @@ public class PlayerController : MonoBehaviour
             if (anims.GetBool("HasObject"))
             {
                 points= points + 1;
+                isHolding = false;
             }
             Debug.Log("touched cake");
             Debug.Log(points);
