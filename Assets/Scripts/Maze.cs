@@ -65,7 +65,7 @@ public class Maze : MonoBehaviour
 
     IEnumerator waiter()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(25f);
         removeMiddle();
         makeEntrances();
     }
@@ -211,7 +211,7 @@ public class Maze : MonoBehaviour
         for (int i = 0; i < loopNum; i++)
         {
             removeEdges();
-            yield return new WaitForSeconds(0.001f);
+            yield return new WaitForSeconds(0.01f);
         }
     }
 
