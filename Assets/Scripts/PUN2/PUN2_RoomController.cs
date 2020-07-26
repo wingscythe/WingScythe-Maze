@@ -30,7 +30,7 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
             PhotonNetwork.Instantiate(mazePrefab.name, Vector3.zero , Quaternion.identity);
 
             seed = Random.Range(int.MinValue, int.MaxValue);
-	        photonView.RPC("SetAll", PhotonTargets.All, Random.Range(int.MinValue, int.MaxValue));
+	        photonView.RPC("SetAll", RpcTarget.All, Random.Range(int.MinValue, int.MaxValue));
         }
     }
 
@@ -39,7 +39,7 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
         Debug.Log("RECIEVED SEED: " + seed);
     }
 
-    void getSeed(){
+    int getSeed(){
         return seed;
     }
 
