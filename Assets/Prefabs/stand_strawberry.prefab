@@ -107,5 +107,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Object: {fileID: 931021868003047243, guid: d53317be757e1e5429ea2fe649ee7bf9, type: 3}
+  fruit: 4
   ObjectLocation: {x: 0.007, y: 0.0041, z: -0.007}
   ObjectRotation: {x: -110.543, y: 175.836, z: -260.491}
