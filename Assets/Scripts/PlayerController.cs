@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody rb;
     //public Animator anims;
     public Transform mcamera;
-
+    public int p = 0;
     [Header("Movement")]
     public float moveSpeed = 5f;
     private float horizontalInput = 0f;
@@ -78,5 +80,17 @@ public class PlayerController : MonoBehaviour
     void MovementAnimation() {
         float FloatSpeed = Mathf.Abs((horizontalInput+verticalInput)*speed);
         anims.SetFloat("speed", FloatSpeed);
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Cake")
+        {
+            if (anims.getBool("HasObject"))
+            {
+                anims.setFloat("Points", p + 1);
+            }
+            Debug.Log("touched cake");
+        }
     }
 }
