@@ -33,7 +33,7 @@ public class Maze : MonoBehaviour
 
     public void Start()
     {
-        yield return new WaitForSeconds(1f);
+        StartCoroutine(prewaiter());
         seeder = seederObj.GetComponent<PUN2_RoomController>();
         int seed = getSeed();
         Random.InitState(seed);
@@ -57,6 +57,10 @@ public class Maze : MonoBehaviour
         StartCoroutine(waiter());
         
 
+    }
+
+    IEnumerator prewaiter(){
+        yield return new WaitForSeconds(1f)
     }
 
     IEnumerator waiter()
