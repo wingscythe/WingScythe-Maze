@@ -204,7 +204,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352305581784790397}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 20, z: 0}
+  m_LocalPosition: {x: 0, y: 30, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2757614949434237836}
@@ -678,6 +678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2757614949434237838}
   mcamera: {fileID: 1390051651549983775}
+  p: 0
   moveSpeed: 5
   speed: 0
 --- !u!54 &2757614949434237838
