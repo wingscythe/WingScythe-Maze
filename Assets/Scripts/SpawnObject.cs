@@ -12,12 +12,7 @@ public class SpawnObject : MonoBehaviour
         if (other.CompareTag("Player") && !other.GetComponent<PlayerController>().isHolding) {
             GameObject item = Instantiate(Object, Vector3.zero, Quaternion.Euler(0, 0, 0)) as GameObject;
             // GameObject item = Instantiate(Object, ObjectLocation, ObjectRotation) as GameObject;            
-            Transform destination = other.transform.Find("gnome_model").Find("lower_body").Find("upper_body").Find("upper_arm.R").Find("lower_arm.R").Find("hand.R");
-            if (destination) {
-                Debug.Log("destination found");
-            }else {
-                Debug.Log("not found");
-            }
+            Transform destination = other.transform.Find("gnome_model").Find("lower_body").Find("upper_body").Find("upper_arm.R").Find("lower_arm.R").Find("hand.R");         
             other.GetComponent<PlayerController>().isHolding = true; 
             item.transform.parent = destination.transform;
             item.transform.localPosition = ObjectLocation;

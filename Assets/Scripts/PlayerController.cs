@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Cake")
         {
-            if (anims.GetBool("HasObject"))
+            if (isHolding)
             {
                 points= points + 1;
                 isHolding = false;
