@@ -164,7 +164,6 @@ public class Maze : MonoBehaviour
 
         Edge randomEdge = edges[randInt];
         
-
         edges.RemoveAt(randInt);
 
         if (Tile.getHighestParent(randomEdge.tiles[0]) == Tile.getHighestParent(randomEdge.tiles[1]))
@@ -206,7 +205,7 @@ public class Maze : MonoBehaviour
         for (int i = 0; i < loopNum; i++)
         {
             removeEdges();
-            yield return new WaitForSeconds(0f);
+            yield return new WaitForSeconds(0.01f);
         }
     }
 
@@ -218,14 +217,18 @@ public class Maze : MonoBehaviour
         int i = 0;
         while (i < hitColliders.Length)
         {
-            if(hitColliders[i].gameObject.tag != "Player") { 
+            if (hitColliders[i].gameObject.tag != "Player")
+            {
                 Destroy(hitColliders[i].gameObject);
                 i++;
-                }
-            break;
+            }
+            else if (hitColliders[i].gameObject.tag == "Player")
+            {
+                break;
+            }
+            GameObject temp = Instantiate(Cake, mid, Quaternion.identity);
+            temp.transform.SetParent(this.transform);
         }
-        GameObject temp = Instantiate(Cake, mid, Quaternion.identity);
-        temp.transform.SetParent(this.transform);
     }
 
     public void makeEntrances()
