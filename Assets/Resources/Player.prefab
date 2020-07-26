@@ -678,7 +678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 2757614949434237838}
   mcamera: {fileID: 1390051651549983775}
-  p: 0
+  points: 0
   moveSpeed: 5
   speed: 0
   isHolding: 0

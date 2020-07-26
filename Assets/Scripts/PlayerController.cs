@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody rb;
     //public Animator anims;
     public Transform mcamera;
-    public int p = 0;
+    public int points = 0;
     [Header("Movement")]
     public float moveSpeed = 5f;
     private float horizontalInput = 0f;
@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour
         {
             if (anims.GetBool("HasObject"))
             {
-                anims.SetFloat("Points", p + 1);
+                points= points + 1;
             }
             Debug.Log("touched cake");
         }
