@@ -31,6 +31,7 @@ public class Maze : MonoBehaviour
 
     public int EdgeIndex = 0;
 
+
     public void Start()
     {
         seeder = seederObj.GetComponent<PUN2_RoomController>();
