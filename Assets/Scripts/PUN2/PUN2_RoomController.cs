@@ -39,7 +39,7 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
         Debug.Log("RECIEVED SEED: " + seed);
     }
 
-    int getSeed(){
+    public int getSeed(){
         return seed;
     }
 
