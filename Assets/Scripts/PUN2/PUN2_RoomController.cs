@@ -14,6 +14,8 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
 
     public int seed;
 
+    public float cooldown = Random.Range(30, 60);
+
     // Use this for initialization
     void Start () {
         //In case we started this demo with the wrong scene being active, simply load the menu scene
@@ -35,6 +37,21 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
         }
     }
 
+    void Update(){
+        if(isMasterClient){
+            if(cooldown<=0){
+                //Control and sync maze spawn
+                PhotonNetwork.Destroy(mazePrefab);
+                seed = Random.Range(int.MinValue, int.MaxValue);
+                photonView.RPC("setSeed", RpcTarget.All, seed);
+                PhotonNetwork.Instantiate(mazePrefab.name, Vector3.zero , Quaternion.identity);
+                cooldown = OnJoinRandomFailed.Range(30,60);
+            }else{
+                cooldown-=TrueSyncManager.DeltaTime;
+            }
+
+        }
+    }
 
     [PunRPC]
     void setSeed(int sentSeed){
