@@ -27,7 +27,8 @@ public class MazeCreation : MonoBehaviour
             for(int j = 0; j<= x; j++)
             {
                 pos = new Vector3(pos.x + (len * j) - len/2 , 0.0f, pos.z + len* i - len/2);
-                Instantiate(prefab, newpos, Quaternion.identity);
+                temp = Instantiate(prefab, newpos, Quaternion.identity);
+                temp.transform.SetParent(this.transform);
             }
         }
 
@@ -37,6 +38,7 @@ public class MazeCreation : MonoBehaviour
             {
                 pos = new Vector3(pos.x + len * j - len/2, 0.0f, pos.z + len * i - len/2);
                 temp = Instantiate(prefab, newpos, Quaternion.Euler(0.0f, 90.0f, 0.0f)) as GameObject;
+                temp.transform.SetParent(this.transform);
             }
         }
     }

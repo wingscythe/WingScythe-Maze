@@ -76,7 +76,8 @@ public class Maze : MonoBehaviour
                 if (x == 0 || x == width)
                 {
                     
-                    Instantiate(prefab, new Vector3((x * 5), 0, (z * 5)), Quaternion.Euler(0, 90, 0));
+                    GameObject temp = Instantiate(prefab, new Vector3((x * 5), 0, (z * 5)), Quaternion.Euler(0, 90, 0));
+                    temp.transform.SetParent(this.transform);
                 }
 
             }
@@ -92,7 +93,8 @@ public class Maze : MonoBehaviour
             {
                 if (z == 0 || z == height)
                 {
-                    Instantiate(prefab, new Vector3((x * 5) + 2.5f, 0, (z * 5) + 2.5f), Quaternion.Euler(0, 0, 0));
+                    GameObject temp = Instantiate(prefab, new Vector3((x * 5) + 2.5f, 0, (z * 5) + 2.5f), Quaternion.Euler(0, 0, 0));
+                    temp.transform.SetParent(this.transform);
                 }
 
             }
@@ -109,6 +111,7 @@ public class Maze : MonoBehaviour
             for (int x = 1; x < width; x++)
             {
                 GameObject go = (GameObject)Instantiate(prefab, new Vector3((x * 5), 0, (z * 5)), Quaternion.Euler(0, 90, 0));
+                go.transform.SetParent(this.transform);
 
                 Edge edge = go.AddComponent<Edge>() as Edge;
 
@@ -136,6 +139,7 @@ public class Maze : MonoBehaviour
             for (int x = 0; x < width; x++)
             {
                 GameObject go = (GameObject)Instantiate(prefab, new Vector3((x * 5) + 2.5f, 0, (z * 5) + 2.5f), Quaternion.Euler(0, 0, 0));
+                go.transform.SetParent(this.transform);
 
                 Edge edge = go.AddComponent<Edge>() as Edge;
 
@@ -216,7 +220,8 @@ public class Maze : MonoBehaviour
             Destroy(hitColliders[i].gameObject);
             i++;
         }
-        Instantiate(Cake, mid, Quaternion.identity);
+        GameObject temp = Instantiate(Cake, mid, Quaternion.identity);
+        temp.transform.SetParent(this.transform);
     }
 
     public void makeEntrances()
