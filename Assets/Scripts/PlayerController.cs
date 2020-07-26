@@ -29,6 +29,11 @@ public class PlayerController : MonoBehaviour
         speed = moveSpeed;
         anims = gameObject.GetComponentInChildren<Animator>();
     }
+    
+    int getPoints()
+    {
+        return points;
+    }
 
     // Update is called once per frame
     void Update()
@@ -101,4 +106,5 @@ public class PlayerController : MonoBehaviour
             Debug.Log(points);
         }
     }
+
 }

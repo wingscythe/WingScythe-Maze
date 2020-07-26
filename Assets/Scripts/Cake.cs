@@ -14,11 +14,11 @@ public class Cake : MonoBehaviour
     }
 
     // Update is called once per frame
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collider)
     {
-        if (collision.gameObject.tag == "Fruit")
+        if (collider.gameObject.tag == "Fruit")
         {
-            Destroy(collision.gameObject);
+            Destroy(collider.gameObject);
             Debug.Log("touched cake");
         }
     }
