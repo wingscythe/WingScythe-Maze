@@ -803,7 +803,7 @@ GameObject:
   - component: {fileID: 9100613771376296382}
   m_Layer: 0
   m_Name: MLH_cake_model
-  m_TagString: Untagged
+  m_TagString: Cake
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
