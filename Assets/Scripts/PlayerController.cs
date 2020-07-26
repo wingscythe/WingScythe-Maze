@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
         {
             if (isHolding)
             {
-                points= points + 1;
+                points = points + 1;
                 isHolding = false;
             }
             Debug.Log("touched cake");
