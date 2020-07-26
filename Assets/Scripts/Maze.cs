@@ -36,6 +36,7 @@ public class Maze : MonoBehaviour
         StartCoroutine(prewaiter());
         seeder = seederObj.GetComponent<PUN2_RoomController>();
         int seed = getSeed();
+        Debug.Log("THIS IS FROM MAZE.CS" + seed);
         Random.InitState(seed);
         Debug.Log("THIS IS FROM MAZE.CS" + seed);
         tiles = new Tile[width * height];
