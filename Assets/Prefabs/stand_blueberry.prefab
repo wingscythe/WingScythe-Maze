@@ -106,6 +106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8061a2ce50037b488f8eb1cf399f043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Object: {fileID: 919132149155446097, guid: 17d17b0b09f86ac4d94c6292a1d32dd3, type: 3}
+  Object: {fileID: 5311736705181562039, guid: 23ca9001a0408d14a886ea3f1b913316, type: 3}
   ObjectLocation: {x: 0.0049, y: 0.0029, z: -0.0075}
   ObjectRotation: {x: -3.103, y: 87.52, z: 2.249}

@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 7661886298034415981}
   - component: {fileID: 8455267992636547617}
   - component: {fileID: -2428770299154558869}
-  - component: {fileID: 8309565000121451830}
+  - component: {fileID: -5640519528929253625}
+  - component: {fileID: 6047774722246163695}
   m_Layer: 0
   m_Name: blueberry_model
   m_TagString: Fruit
@@ -115,6 +116,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: -2428770299154558869}
+  - {fileID: 6047774722246163695}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -133,7 +135,7 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
---- !u!54 &8309565000121451830
+--- !u!54 &-5640519528929253625
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,5 +149,21 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &6047774722246163695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5311736705181562039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 0
+  m_TeleportEnabled: 0
+  m_TeleportIfDistanceGreaterThan: 3

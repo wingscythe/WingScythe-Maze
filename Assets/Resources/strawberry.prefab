@@ -205,7 +205,8 @@ GameObject:
   - component: {fileID: 163287133904110799}
   - component: {fileID: 2765808056744612795}
   - component: {fileID: 4506318599365970531}
-  - component: {fileID: 2658746149009018083}
+  - component: {fileID: 9163922685302743389}
+  - component: {fileID: 3359107841180939819}
   m_Layer: 0
   m_Name: strawberry
   m_TagString: Fruit
@@ -260,6 +261,7 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   ObservedComponents:
+  - {fileID: 3359107841180939819}
   - {fileID: 4506318599365970531}
   viewIdField: 0
   InstantiationId: 0
@@ -279,7 +281,7 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
---- !u!54 &2658746149009018083
+--- !u!54 &9163922685302743389
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -293,8 +295,24 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &3359107841180939819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931021868003047243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 0
+  m_TeleportEnabled: 0
+  m_TeleportIfDistanceGreaterThan: 3
 --- !u!1 &1797724006237016640
 GameObject:
   m_ObjectHideFlags: 0

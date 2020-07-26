@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: -6668518699602347915}
   - component: {fileID: -7483351256060572073}
   - component: {fileID: 9067503964255567586}
-  - component: {fileID: -7138621358074575591}
+  - component: {fileID: 3129714823737631167}
+  - component: {fileID: 257214944434747832}
   m_Layer: 0
   m_Name: chocolate_kisses
   m_TagString: Fruit
@@ -115,6 +116,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 9067503964255567586}
+  - {fileID: 257214944434747832}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -133,7 +135,7 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
---- !u!54 &-7138621358074575591
+--- !u!54 &3129714823737631167
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,5 +149,21 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &257214944434747832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3154101674975413997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64179f3720bbfe947b7724caa67b7c1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizeVelocity: 1
+  m_SynchronizeAngularVelocity: 0
+  m_TeleportEnabled: 0
+  m_TeleportIfDistanceGreaterThan: 3
