@@ -33,6 +33,7 @@ public class Maze : MonoBehaviour
 
     public void Start()
     {
+        yield return new WaitForSeconds(1f);
         seeder = seederObj.GetComponent<PUN2_RoomController>();
         int seed = getSeed();
         Random.InitState(seed);
