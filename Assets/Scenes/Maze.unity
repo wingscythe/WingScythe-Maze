@@ -190,66 +190,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b13d92e2ad3f3ad419d0fbbfc0f1004d, type: 3}
---- !u!1 &234959530
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 234959534}
-  m_Layer: 0
-  m_Name: Spawn1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &234959534
+--- !u!4 &81356526 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 3195019083133062243, guid: b13d92e2ad3f3ad419d0fbbfc0f1004d,
+    type: 3}
+  m_PrefabInstance: {fileID: 81356525}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 234959530}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: 0.5, z: -8.2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &462809368
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 462809372}
-  m_Layer: 0
-  m_Name: Spawn2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &462809372
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 462809368}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: 0.5, z: 9.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1018776261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -319,6 +265,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d101a0f52a8be024e8704902d500ac86, type: 3}
+--- !u!4 &1018776262 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4717692264280439724, guid: d101a0f52a8be024e8704902d500ac86,
+    type: 3}
+  m_PrefabInstance: {fileID: 1018776261}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1249125795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -403,36 +355,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38578716a4172f543afafbea1bc28497, type: 3}
---- !u!1 &1313975280
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1313975284}
-  m_Layer: 0
-  m_Name: Spawn3
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1313975284
+--- !u!4 &1249125796 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7318508436565082225, guid: 38578716a4172f543afafbea1bc28497,
+    type: 3}
+  m_PrefabInstance: {fileID: 1249125795}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1313975280}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.2, y: 0.5, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1627114583
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,36 +522,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ccfb0d1a2f360c439fb967e92da41d9, type: 3}
---- !u!1 &2040665148
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2040665152}
-  m_Layer: 0
-  m_Name: Spawn4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2040665152
+--- !u!4 &1815411441 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2853949818095507118, guid: 8ccfb0d1a2f360c439fb967e92da41d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1815411440}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2040665148}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.2, y: 0.5, z: -0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &5824953233874558921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -645,22 +549,22 @@ PrefabInstance:
         type: 3}
       propertyPath: _spawnPoint.Array.data[0]
       value: 
-      objectReference: {fileID: 234959534}
+      objectReference: {fileID: 1815411441}
     - target: {fileID: 5824953235015500664, guid: 5f8e158305745ff45ad5e882f18792da,
         type: 3}
       propertyPath: _spawnPoint.Array.data[1]
       value: 
-      objectReference: {fileID: 462809372}
+      objectReference: {fileID: 1249125796}
     - target: {fileID: 5824953235015500664, guid: 5f8e158305745ff45ad5e882f18792da,
         type: 3}
       propertyPath: _spawnPoint.Array.data[2]
       value: 
-      objectReference: {fileID: 1313975284}
+      objectReference: {fileID: 1018776262}
     - target: {fileID: 5824953235015500664, guid: 5f8e158305745ff45ad5e882f18792da,
         type: 3}
       propertyPath: _spawnPoint.Array.data[3]
       value: 
-      objectReference: {fileID: 2040665152}
+      objectReference: {fileID: 81356526}
     - target: {fileID: 5824953235015500665, guid: 5f8e158305745ff45ad5e882f18792da,
         type: 3}
       propertyPath: m_LocalPosition.x
