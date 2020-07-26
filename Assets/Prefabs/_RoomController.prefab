@@ -49,10 +49,10 @@ MonoBehaviour:
   mazePrefab: {fileID: 7369932334031643225, guid: 548eca95efeacd44fb486b39a4f04f02,
     type: 3}
   _spawnPoint:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 3195019083133062243, guid: b13d92e2ad3f3ad419d0fbbfc0f1004d, type: 3}
+  - {fileID: 7318508436565082225, guid: 38578716a4172f543afafbea1bc28497, type: 3}
+  - {fileID: 4717692264280439724, guid: d101a0f52a8be024e8704902d500ac86, type: 3}
+  - {fileID: 2853949818095507118, guid: 8ccfb0d1a2f360c439fb967e92da41d9, type: 3}
   seed: 0
 --- !u!114 &1982686710124930362
 MonoBehaviour:
@@ -71,7 +71,8 @@ MonoBehaviour:
   prefixField: -1
   Synchronization: 0
   OwnershipTransfer: 0
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 0}
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0

@@ -150,6 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f07ef5a39970ca439bef5d0a799f7b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelName: Maze
+  maxPlayers: 4
 --- !u!4 &753601951
 Transform:
   m_ObjectHideFlags: 0
