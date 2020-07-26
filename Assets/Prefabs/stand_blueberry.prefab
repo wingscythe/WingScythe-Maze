@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7318508436565082225}
   - component: {fileID: 5926538306742800340}
   - component: {fileID: 8492588752147233566}
+  - component: {fileID: 602250661}
+  - component: {fileID: 602250660}
   m_Layer: 0
   m_Name: stand_blueberry
   m_TagString: Untagged
@@ -79,3 +81,31 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &602250661
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988048772638251723}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.063718416, y: 0.043718413, z: 0.13076736}
+  m_Center: {x: 0, y: -0.000000009709523, z: 0.065159515}
+--- !u!114 &602250660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988048772638251723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8061a2ce50037b488f8eb1cf399f043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Object: {fileID: 919132149155446097, guid: 17d17b0b09f86ac4d94c6292a1d32dd3, type: 3}
+  ObjectLocation: {x: 0.0049, y: 0.0029, z: -0.0075}
+  ObjectRotation: {x: -3.103, y: 87.52, z: 2.249}
