@@ -106,6 +106,6 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
     }
 
     public static void leaveRoom(){
-        PhotonNetwork.LeaveRoom;
+        PhotonNetwork.LeaveRoom();
     }
 }
