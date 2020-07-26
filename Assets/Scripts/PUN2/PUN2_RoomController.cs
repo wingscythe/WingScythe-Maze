@@ -35,7 +35,7 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
         
         if(isMasterClient){
             //Control and sync maze spawn
-            seed = Random.Range(0, 500);
+            seed = Random.Range(0, 50);
             
             currMaze = PhotonNetwork.Instantiate(mazePrefab.name, Vector3.zero , Quaternion.identity);
 
@@ -52,7 +52,7 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
             if(cooldown<=0){
                 //Control and sync maze spawn
                 PhotonNetwork.Destroy(currMaze);
-                seed = Random.Range(0, 500);
+                seed = Random.Range(0, 50);
                 photonView.RPC("setSeed", RpcTarget.All, seed);
                 currMaze = PhotonNetwork.Instantiate(mazePrefab.name, Vector3.zero , Quaternion.identity);
                 cooldown = Random.Range(30,60);
