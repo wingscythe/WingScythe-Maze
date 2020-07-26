@@ -108,8 +108,8 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
     public static void closeRoom(){
         bool isMasterClient = PhotonNetwork.IsMasterClient;
         if(isMasterClient){
-            PhotonNetwork.room.isVisible = false;
-            PhotonNetwork.room.isOpen = false;
+            PhotonNetwork.CurrentRoom.isVisible = false;
+            PhotonNetwork.CurrentRoom.isOpen = false;
         }
     }
 }
