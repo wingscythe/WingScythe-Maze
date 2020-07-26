@@ -98,6 +98,7 @@ public class PlayerController : MonoBehaviour
                 points= points + 1;
             }
             Debug.Log("touched cake");
+            Debug.Log(points);
         }
     }
 }
