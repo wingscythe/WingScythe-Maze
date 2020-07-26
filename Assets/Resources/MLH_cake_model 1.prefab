@@ -804,7 +804,7 @@ GameObject:
   - component: {fileID: 1912569633880588980}
   m_Layer: 0
   m_Name: MLH_cake_model 1
-  m_TagString: Untagged
+  m_TagString: Cake
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -873,7 +873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
+  m_SynchronizeScale: 1
 --- !u!65 &1912569633880588980
 BoxCollider:
   m_ObjectHideFlags: 0

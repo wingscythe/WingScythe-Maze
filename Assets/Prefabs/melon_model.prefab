@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7756445038914082749}
   m_Layer: 0
   m_Name: melon_model
-  m_TagString: Untagged
+  m_TagString: Fruit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
