@@ -33,9 +33,9 @@ public class Maze : MonoBehaviour
 
     public void Start()
     {
-        seeder = seederObj.GetComponent<PUN2_RoomController>();
-        int seed = getSeed();
-        Random.InitState(seed); 
+       // seeder = seederObj.GetComponent<PUN2_RoomController>();
+        //int seed = getSeed();
+        //Random.InitState(seed); 
         tiles = new Tile[width * height];
 
         for (int i = 0; i < width * height; i++)
@@ -64,10 +64,11 @@ public class Maze : MonoBehaviour
         makeEntrances();
     }
 
-    public int getSeed()
+   /* public int getSeed()
     {
         return seeder.getSeed();
-    }
+    }*/
+
     public void spawnLeftRightBoundaries()
     {
         for (int z = 1; z <= height; z++)
