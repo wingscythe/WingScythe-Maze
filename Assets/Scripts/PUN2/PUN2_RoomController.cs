@@ -27,7 +27,7 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
             return;
         }
 
-        PhotonNetwork.Instantiate(playerPrefab.name, _spawnPoint[PhotonNetwork.LocalPlayer.ActorNumber - 1].transform.position, _spawnPoint[PhotonNetwork.LocalPlayer.ActorNumber - 1].transform.rotation);
+        mazePrefab = PhotonNetwork.Instantiate(playerPrefab.name, _spawnPoint[PhotonNetwork.LocalPlayer.ActorNumber - 1].transform.position, _spawnPoint[PhotonNetwork.LocalPlayer.ActorNumber - 1].transform.rotation);
     
         bool isMasterClient = PhotonNetwork.IsMasterClient;
         
@@ -50,7 +50,7 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
                 PhotonNetwork.Destroy(mazePrefab);
                 seed = Random.Range(int.MinValue, int.MaxValue);
                 photonView.RPC("setSeed", RpcTarget.All, seed);
-                PhotonNetwork.Instantiate(mazePrefab.name, Vector3.zero , Quaternion.identity);
+                mazePrefab = PhotonNetwork.Instantiate(mazePrefab.name, Vector3.zero , Quaternion.identity);
                 cooldown = Random.Range(30,60);
                 lastTime= PhotonNetwork.Time;
             }else{
