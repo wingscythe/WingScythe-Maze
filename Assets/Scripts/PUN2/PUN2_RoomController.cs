@@ -14,7 +14,9 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
 
     public int seed;
 
-    public float cooldown = Random.Range(30, 60);
+    public double cooldown;
+
+    public double lastTime;
 
     // Use this for initialization
     void Start () {
@@ -35,6 +37,9 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
             photonView.RPC("setSeed", RpcTarget.All, seed);
             PhotonNetwork.Instantiate(mazePrefab.name, Vector3.zero , Quaternion.identity);
         }
+
+        lastTime=PhotonNetwork.Time;
+        cooldown = Random.Range(30, 60);
     }
 
     void Update(){
@@ -47,8 +52,10 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
                 photonView.RPC("setSeed", RpcTarget.All, seed);
                 PhotonNetwork.Instantiate(mazePrefab.name, Vector3.zero , Quaternion.identity);
                 cooldown = Random.Range(30,60);
+                lastTime= PhotonNetwork.Time;
             }else{
-                cooldown-=Time.DeltaTime;
+                cooldown-=PhotonNetwork.Time-lastTime;
+                lastTime= PhotonNetwork.Time;
             }
 
         }
