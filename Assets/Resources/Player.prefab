@@ -681,6 +681,7 @@ MonoBehaviour:
   p: 0
   moveSpeed: 5
   speed: 0
+  isHolding: 0
 --- !u!54 &2757614949434237838
 Rigidbody:
   m_ObjectHideFlags: 0
