@@ -40,12 +40,14 @@ public class CounterText : MonoBehaviour, IOnEventCallback
     private void onGameEnd(){
         RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.All }; // You would have to set the Receivers to All in order to receive this event on the local client as well
         PhotonNetwork.RaiseEvent(GameOverCode, PUN2_RoomController.getNickname(), raiseEventOptions, SendOptions.SendReliable);
+        PhotonNetwork.RemoveCallbackTarget(this);
     }
 
     public void OnEvent(EventData photonEvent) {
         byte eventCode = photonEvent.Code;
         if(eventCode == GameOverCode){
             Debug.Log("ROAD ROLLA DA");
+            PUN2_RoomController.closeRoom();
         }
     }
 }
