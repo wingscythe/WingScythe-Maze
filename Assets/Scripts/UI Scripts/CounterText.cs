@@ -29,8 +29,15 @@ public class CounterText : MonoBehaviour, IOnEventCallback
         }
     }
 
-    private void onGameEnd()
-    {
+    private void OnEnable(){
+        PhotonNetwork.AddCallbackTarget(this);
+    }
+
+    private void OnDisable(){
+        PhotonNetwork.RemoveCallbackTarget(this);
+    }
+
+    private void onGameEnd(){
         RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.All }; // You would have to set the Receivers to All in order to receive this event on the local client as well
         PhotonNetwork.RaiseEvent(GameOverCode, PUN2_RoomController.getNickname(), raiseEventOptions, SendOptions.SendReliable);
     }
