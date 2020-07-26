@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Animator")]
     private Animator anims;
+    public bool isHolding = false;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +36,7 @@ public class PlayerController : MonoBehaviour
         InputUpdate();
         Movement();
         MovementAnimation();
-        if(Input.GetKey(KeyCode.Q)) {
+        if(isHolding) {
             HoldingObject();
         }
         PlayerRotation();
@@ -55,6 +56,12 @@ public class PlayerController : MonoBehaviour
     void HoldingObject() {
         anims.SetBool("HasObject",true);
     }
+    // bool getHold() {
+    //     return this.isHolding;
+    // }
+    // void setHold(bool value) {
+    //     this.isHolding = true;
+    // }
     void PlayerRotation() {
         // H: 0 V: 1 --> forward
         if (horizontalInput == 0 && verticalInput > 0 ) {
