@@ -216,12 +216,13 @@ public class Maze : MonoBehaviour
         Vector3 mid = new Vector3((float) (5*width) / 2, 0.0f,(float) (5*height) / 2);
         Collider[] hitColliders = Physics.OverlapBox(mid, transform.localScale / 4);
         int i = 0;
-        while (i < hitColliders.Length )
+        while (i < hitColliders.Length)
         {
             if(hitColliders[i].gameObject.tag != "Player") { 
                 Destroy(hitColliders[i].gameObject);
                 i++;
                 }
+            break;
         }
         GameObject temp = Instantiate(Cake, mid, Quaternion.identity);
         temp.transform.SetParent(this.transform);
