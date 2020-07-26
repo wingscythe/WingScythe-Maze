@@ -7,7 +7,7 @@ using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using Random = UnityEngine.Random;
-
+using Debug = UnityEngine.Debug;
 public class Maze : MonoBehaviour
 {
 
@@ -35,7 +35,8 @@ public class Maze : MonoBehaviour
     {
         seeder = seederObj.GetComponent<PUN2_RoomController>();
         int seed = getSeed();
-        Random.InitState(seed); 
+        Random.InitState(seed);
+        Debug.Log("THIS IS FROM MAZE.CS", seed);
         tiles = new Tile[width * height];
 
         for (int i = 0; i < width * height; i++)
