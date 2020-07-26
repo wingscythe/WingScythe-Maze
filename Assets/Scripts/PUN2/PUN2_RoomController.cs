@@ -14,7 +14,7 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
     //Player spawn point
     public Transform[] _spawnPoint;
 
-    public int seed;
+    public static int seed;
 
     public double cooldown;
 
@@ -72,6 +72,7 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
     }
 
     public int getSeed(){
+        Debug.Log("GET SEED: " + seed);
         return seed;
     }
 
