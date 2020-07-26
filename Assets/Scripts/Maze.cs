@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Maze : MonoBehaviour
 {
@@ -34,7 +35,7 @@ public class Maze : MonoBehaviour
     {
         seeder = seederObj.GetComponent<PUN2_RoomController>();
         int seed = getSeed();
-        UnityEngine.Random.seed = seed; 
+        Random.InitState(seed); 
         tiles = new Tile[width * height];
 
         for (int i = 0; i < width * height; i++)
