@@ -218,11 +218,10 @@ public class Maze : MonoBehaviour
         int i = 0;
         while (i < hitColliders.Length )
         {
-            if (hitColliders[i].gameObject.tag != "Player")
-            {
+            if(hitColliders[i].gameObject.tag != "Player") { 
                 Destroy(hitColliders[i].gameObject);
                 i++;
-            }
+                }
         }
         GameObject temp = Instantiate(Cake, mid, Quaternion.identity);
         temp.transform.SetParent(this.transform);
