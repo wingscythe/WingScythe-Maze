@@ -47,7 +47,12 @@ public class CounterText : MonoBehaviour, IOnEventCallback
         byte eventCode = photonEvent.Code;
         if(eventCode == GameOverCode){
             Debug.Log("ROAD ROLLA DA");
-            PUN2_RoomController.closeRoom();
+            StartCoroutine(waiter());
+            PUN2_RoomController.leaveRoom();
         }
+    }
+
+    IEnumerator waiter(){
+        yield return new WaitForSeconds(5f);
     }
 }

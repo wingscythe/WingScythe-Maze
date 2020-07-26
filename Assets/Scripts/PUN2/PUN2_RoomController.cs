@@ -105,11 +105,7 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
         UnityEngine.SceneManagement.SceneManager.LoadScene("GameLobby");
     }
 
-    public static void closeRoom(){
-        bool isMasterClient = PhotonNetwork.IsMasterClient;
-        if(isMasterClient){
-            PhotonNetwork.CurrentRoom.isVisible = false;
-            PhotonNetwork.CurrentRoom.isOpen = false;
-        }
+    public static void leaveRoom(){
+        PhotonNetwork.LeaveRoom;
     }
 }
