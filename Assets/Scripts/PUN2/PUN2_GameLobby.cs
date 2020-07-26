@@ -159,6 +159,7 @@ public class PUN2_GameLobby : MonoBehaviourPunCallbacks {
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer){
+        Debug.Log(PhotonNetwork.CountOfPlayers);
         //Load the Scene called GameLevel (Make sure it's added to build settings)
         if(PhotonNetwork.CountOfPlayers >= 2){
             PhotonNetwork.LoadLevel("Maze");
