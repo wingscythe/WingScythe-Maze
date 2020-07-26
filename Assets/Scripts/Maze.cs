@@ -33,7 +33,6 @@ public class Maze : MonoBehaviour
 
     public void Start()
     {
-        StartCoroutine(prewaiter());
         seeder = seederObj.GetComponent<PUN2_RoomController>();
         int seed = getSeed();
         Debug.Log("THIS IS FROM MAZE.CS" + seed);
