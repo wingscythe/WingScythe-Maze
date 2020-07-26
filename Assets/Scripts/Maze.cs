@@ -60,7 +60,7 @@ public class Maze : MonoBehaviour
     }
 
     IEnumerator prewaiter(){
-        yield return new WaitForSeconds(1f)
+        yield return new WaitForSeconds(1f);
     }
 
     IEnumerator waiter()
