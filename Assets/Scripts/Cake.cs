@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class Cake : MonoBehaviour
 {
@@ -15,9 +16,9 @@ public class Cake : MonoBehaviour
     // Update is called once per frame
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Fruit")
         {
-            
+            Destroy(collision.gameObject);
             Debug.Log("touched cake");
         }
     }

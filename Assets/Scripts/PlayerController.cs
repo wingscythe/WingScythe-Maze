@@ -86,9 +86,9 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Cake")
         {
-            if (anims.getBool("HasObject"))
+            if (anims.GetBool("HasObject"))
             {
-                anims.setFloat("Points", p + 1);
+                anims.SetFloat("Points", p + 1);
             }
             Debug.Log("touched cake");
         }
