@@ -27,13 +27,15 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
         
         if(isMasterClient){
             //Control and sync maze spawn
+            seed = Random.Range(int.MinValue, int.MaxValue);
+            photonView.RPC("setSeed", RpcTarget.All, seed);
             PhotonNetwork.Instantiate(mazePrefab.name, Vector3.zero , Quaternion.identity);
 
-            seed = Random.Range(int.MinValue, int.MaxValue);
-	        photonView.RPC("SetAll", RpcTarget.All, Random.Range(int.MinValue, int.MaxValue));
         }
     }
 
+
+    [PunRPC]
     void setSeed(int sentSeed){
         seed = sentSeed;
         Debug.Log("RECIEVED SEED: " + seed);

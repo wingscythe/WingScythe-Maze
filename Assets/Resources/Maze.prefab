@@ -51,6 +51,9 @@ MonoBehaviour:
   Fruit3: {fileID: 0}
   Fruit4: {fileID: 0}
   Cake: {fileID: 6579421801118489178, guid: 6823a38448fe9ac42a5136c36713c94b, type: 3}
+  seederObj: {fileID: 5824953235015500646, guid: 5f8e158305745ff45ad5e882f18792da,
+    type: 3}
+  seeder: {fileID: 0}
   width: 20
   height: 20
   tiles: []
