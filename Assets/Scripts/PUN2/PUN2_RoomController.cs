@@ -97,6 +97,10 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
         }
     }
 
+    public static string getNickname(){
+        return PhotonNetwork.NickName;
+    }
+
     public override void OnLeftRoom () {
         //We have left the Room, return back to the GameLobby
         UnityEngine.SceneManagement.SceneManager.LoadScene("GameLobby");

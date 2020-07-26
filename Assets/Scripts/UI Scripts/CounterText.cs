@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
+using ExitGames.Client.Photon;
+using Photon.Realtime;
 
-public class CounterText : MonoBehaviour
+public class CounterText : MonoBehaviour, IOnEventCallback
 {
     public GameObject player;
     public Text pointCounter;
+
+    public const byte GameOverCode = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +20,23 @@ public class CounterText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        pointCounter.text = player.GetComponent<PlayerController>().points.ToString();
+        int points = player.GetComponent<PlayerController>().points;
+        pointCounter.text = points.ToString();
+        if(points >= 3){
+            onGameEnd();
+        }
+    }
+
+    private void onGameEnd()
+    {
+        RaiseEventOptions raiseEventOptions = new RaiseEventOptions { Receivers = ReceiverGroup.All }; // You would have to set the Receivers to All in order to receive this event on the local client as well
+        PhotonNetwork.RaiseEvent(GameOverCode, PUN2_RoomController.getNickname(), raiseEventOptions, SendOptions.SendReliable);
+    }
+
+    public void OnEvent(EventData photonEvent) {
+        byte eventCode = photonEvent.Code;
+        if(eventCode == GameOverCode){
+            Debug.Log("ROAD ROLLA DA");
+        }
     }
 }
