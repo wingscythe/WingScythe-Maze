@@ -19,9 +19,10 @@ public class Cake : MonoBehaviour
         if (col.gameObject.tag == "Fruit")
         {
             Destroy(col.gameObject);
+            
             Debug.Log("touched cake");
         }
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Player" && col.GetComponent<PlayerController>().isHolding)
         {
             col.GetComponent<PlayerController>().isHolding = false;
             col.GetComponent<PlayerController>().points++;
