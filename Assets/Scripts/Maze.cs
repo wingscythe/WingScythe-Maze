@@ -25,9 +25,9 @@ public class Maze : MonoBehaviour
 
     public int height;
 
-    public static Tile[] tiles;
+    public Tile[] tiles;
 
-    public static List<Edge> edges;
+    public List<Edge> edges;
 
     public int EdgeIndex = 0;
 
@@ -56,6 +56,34 @@ public class Maze : MonoBehaviour
         StartCoroutine(removeEdgeCoroutine());
         StartCoroutine(waiter());
         
+
+    }
+
+    public void Restart()
+    {
+        seeder = seederObj.GetComponent<PUN2_RoomController>();
+        int seed = getSeed();
+        Debug.Log("THIS IS FROM MAZE.CS" + seed);
+        Random.InitState(seed);
+        Debug.Log("THIS IS FROM MAZE.CS" + seed);
+        tiles = new Tile[width * height];
+
+        for (int i = 0; i < width * height; i++)
+        {
+            tiles[i] = new Tile();
+        }
+
+        edges = new List<Edge>();
+
+        spawnLeftRightBoundaries();
+        spawnUpDownBoundaries();
+        spawnInnerEdgesLeftRight();
+        spawnInnerEdgesUpDown();
+
+
+        StartCoroutine(removeEdgeCoroutine());
+        StartCoroutine(waiter());
+
 
     }
 

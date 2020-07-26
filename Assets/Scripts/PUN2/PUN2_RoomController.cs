@@ -54,6 +54,7 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
                 PhotonNetwork.Destroy(currMaze);
                 seed = Random.Range(0, 20);
                 photonView.RPC("setSeed", RpcTarget.All, seed);
+                mazePrefab.GetComponent<Maze>().Restart();
                 currMaze = PhotonNetwork.Instantiate(mazePrefab.name, Vector3.zero , Quaternion.identity);
                 cooldown = Random.Range(45,90);
                 lastTime= PhotonNetwork.Time;
