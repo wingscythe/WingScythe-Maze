@@ -10,14 +10,15 @@ public class ButtonToggle : MonoBehaviour
     // public Canvas canvas;
     public GameObject GUI1;
     public GameObject GUI2;
+    public bool isToggle = true;
     bool GUI1OnDisplay = true;
     Button button;
 
     // Start is called before the first frame update
     void Start()
     {
-        GUI1.SetActive(true);
         GUI2.SetActive(false);
+        GUI1.SetActive(true);
         button = this.GetComponent<Button>();
         // button.interactable = true;
         // button.enabled = false;
@@ -52,7 +53,11 @@ public class ButtonToggle : MonoBehaviour
     {
         closeGUI(onDisplayGUI);
         openGUI(offDisplayGUI);
-        GUI1OnDisplay = !GUI1OnDisplay;
+        if (isToggle)
+        {
+            GUI1OnDisplay = !GUI1OnDisplay;
+        }
+        
         Debug.Log(GUI1OnDisplay);
     }
 
