@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3195019083133062243}
   - component: {fileID: 2015685708243698630}
   - component: {fileID: 4331847326288213772}
+  - component: {fileID: 373584333}
+  - component: {fileID: 373584332}
   m_Layer: 0
   m_Name: stand_melon
   m_TagString: Untagged
@@ -79,3 +81,31 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &373584333
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2818457599589865177}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.063718416, y: 0.043718416, z: 0.13076736}
+  m_Center: {x: 0, y: -0.000000011651428, z: 0.065159515}
+--- !u!114 &373584332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2818457599589865177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8061a2ce50037b488f8eb1cf399f043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Object: {fileID: 8116772797524424296, guid: faaf82f27c44e144d882503e7da3fed7, type: 3}
+  ObjectLocation: {x: 0.0028, y: 0.004, z: -0.0058}
+  ObjectRotation: {x: -0.066, y: 106.532, z: 0.018}

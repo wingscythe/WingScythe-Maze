@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody rb;
     //public Animator anims;
     public Transform mcamera;
-
+    public int points = 0;
     [Header("Movement")]
     public float moveSpeed = 5f;
     private float horizontalInput = 0f;
@@ -19,12 +21,18 @@ public class PlayerController : MonoBehaviour
 
     [Header("Animator")]
     private Animator anims;
+    public bool isHolding = false;
 
     // Start is called before the first frame update
     void Start()
     {
         speed = moveSpeed;
         anims = gameObject.GetComponentInChildren<Animator>();
+    }
+    
+    int getPoints()
+    {
+        return points;
     }
 
     // Update is called once per frame
@@ -33,7 +41,7 @@ public class PlayerController : MonoBehaviour
         InputUpdate();
         Movement();
         MovementAnimation();
-        if(Input.GetKey(KeyCode.Q)) {
+        if(isHolding) {
             HoldingObject();
         }
         PlayerRotation();
@@ -53,6 +61,12 @@ public class PlayerController : MonoBehaviour
     void HoldingObject() {
         anims.SetBool("HasObject",true);
     }
+    // bool getHold() {
+    //     return this.isHolding;
+    // }
+    // void setHold(bool value) {
+    //     this.isHolding = true;
+    // }
     void PlayerRotation() {
         // H: 0 V: 1 --> forward
         if (horizontalInput == 0 && verticalInput > 0 ) {
@@ -79,4 +93,18 @@ public class PlayerController : MonoBehaviour
         float FloatSpeed = Mathf.Abs((horizontalInput+verticalInput)*speed);
         anims.SetFloat("speed", FloatSpeed);
     }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Cake")
+        {
+            if (anims.GetBool("HasObject"))
+            {
+                points= points + 1;
+            }
+            Debug.Log("touched cake");
+            Debug.Log(points);
+        }
+    }
+
 }

@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using Photon.Pun;
+using System.Diagnostics;
+using Debug = UnityEngine.Debug;
 
 public class PUN2_RoomController : MonoBehaviourPunCallbacks {
 
@@ -30,7 +32,6 @@ public class PUN2_RoomController : MonoBehaviourPunCallbacks {
             seed = Random.Range(int.MinValue, int.MaxValue);
             photonView.RPC("setSeed", RpcTarget.All, seed);
             PhotonNetwork.Instantiate(mazePrefab.name, Vector3.zero , Quaternion.identity);
-
         }
     }
 

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Diagnostics;
+using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
@@ -57,7 +58,7 @@ public class Maze : MonoBehaviour
 
     IEnumerator waiter()
     {
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(10f);
         removeMiddle();
         makeEntrances();
     }
@@ -231,10 +232,13 @@ public class Maze : MonoBehaviour
         int i = 0;
         while (i < hitColliders.Length && i< hitColliders2.Length && i < hitColliders3.Length && i < hitColliders4.Length)
         {
-            Destroy(hitColliders[i].gameObject);
-            Destroy(hitColliders2[i].gameObject);
-            Destroy(hitColliders3[i].gameObject);
-            Destroy(hitColliders4[i].gameObject);
+            if (hitColliders[i].gameObject.tag != "Player" && hitColliders2[i].gameObject.tag != "Player" && hitColliders3[i].gameObject.tag != "Player" && hitColliders4[i].gameObject.tag != "Player")
+            {
+                Destroy(hitColliders[i].gameObject);
+                Destroy(hitColliders2[i].gameObject);
+                Destroy(hitColliders3[i].gameObject);
+                Destroy(hitColliders4[i].gameObject);
+            }
             i++;
         }
 

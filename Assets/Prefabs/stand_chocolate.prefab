@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4717692264280439724}
   - component: {fileID: 8563391879633449993}
   - component: {fileID: 5851214691779788995}
+  - component: {fileID: 148466072}
+  - component: {fileID: 148466071}
   m_Layer: 0
   m_Name: stand_chocolate
   m_TagString: Untagged
@@ -79,3 +81,31 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &148466072
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346701514012057878}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.063718416, y: 0.043718416, z: 0.13076736}
+  m_Center: {x: 0, y: -0.000000011651428, z: 0.065159515}
+--- !u!114 &148466071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5346701514012057878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8061a2ce50037b488f8eb1cf399f043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Object: {fileID: 3154101674975413997, guid: cf9bc0f7424dc5b4fbb87be2dd32f76e, type: 3}
+  ObjectLocation: {x: 0.0095, y: -0.0008, z: -0.0121}
+  ObjectRotation: {x: -6.404, y: 96.04401, z: 3.504}
